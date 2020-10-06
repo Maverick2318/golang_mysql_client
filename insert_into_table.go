@@ -22,10 +22,10 @@ func main() {
 	defer db.Close()
 
 	// perform a db.Query insert
-        insert, err := db.Query("INSERT INTO customers VALUES ( 1, 'John', 'Doe' )")
+	insert, err := db.Query("INSERT INTO customers VALUES ( 1, 'John', 'Doe' )")
 
-        // if there is an error inserting, handle it
-        if err != nil {
+	// if there is an error inserting, handle it
+	if err != nil {
 		panic(err.Error())
 	}
 
