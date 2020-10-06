@@ -8,9 +8,9 @@ import (
 )
 
 type Customer struct {
-	ID	int `json:"customer_id"`
-	FirstName	string	`json:"first_name"`
-	LastName	string	`json:"last_name"`
+	ID        int    `json:"customer_id"`
+	FirstName string `json:"first_name"`
+	LastName  string `json:"last_name"`
 }
 
 func main() {
@@ -28,8 +28,8 @@ func main() {
 	// defer the close until after main() has finished
 	defer db.Close()
 
-        // Execute the query
-        results, err := db.Query("SELECT customer_id, first_name, last_name FROM customers")
+	// Execute the query
+	results, err := db.Query("SELECT customer_id, first_name, last_name FROM customers")
 
 	for results.Next() {
 		var customer Customer
