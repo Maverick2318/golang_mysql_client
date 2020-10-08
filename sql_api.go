@@ -34,7 +34,7 @@ func QuerySingleRow(w http.ResponseWriter, req *http.Request) {
                 panic(err.Error())
         }
 
-        // defer the close until after main() has finished
+        // defer the close until after the function has finished
         defer db.Close()
 
         var customer Customer
